@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101426">
+  <title>MK Chat Bot — Your AI Companion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <main class="app-shell">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark">MK<span>✦</span></div><div><strong>MK Chat Bot</strong><small>AI companion</small></div></div>
+      <button id="new-chat" class="new-chat"><span>＋</span> New chat</button>
+      <div class="side-label">YOUR ASSISTANT</div>
+      <div class="feature-item active"><span>✧</span><div><b>Smart chat</b><small>Ask anything</small></div></div>
+      <div class="feature-item"><span>▧</span><div><b>File analysis</b><small>Images, video & documents</small></div></div>
+      <div class="side-tip"><div class="tip-icon">✦</div><b>Make ideas happen</b><p>Ask questions, explore concepts, or share a file for MK to help you understand it.</p></div>
+      <div class="sidebar-footer"><span class="status-dot"></span> AI assistant ready</div>
+    </aside>
+
+    <section class="main-panel">
+      <header class="topbar">
+        <div class="mobile-brand"><div class="brand-mark">MK<span>✦</span></div><strong>MK Chat Bot</strong></div>
+        <div class="online-status"><span class="status-dot"></span> Ready to help</div>
+        <button id="clear-chat" class="icon-button" title="Clear chat" aria-label="Clear chat">⌫</button>
+      </header>
+
+      <section id="chat-box" class="chat-box" aria-live="polite">
+        <div id="welcome" class="welcome">
+          <div class="hero-orb"><span>✦</span><i></i></div>
+          <p class="eyebrow">YOUR AI, YOUR WAY</p>
+          <h1>Hey there!<br><span>What’s on your mind?</span></h1>
+          <p class="welcome-copy">I’m MK, your AI companion. Ask a question, explore an idea, or attach a file and let’s figure it out together.</p>
+          <div class="prompt-grid">
+            <button class="prompt-card" data-prompt="Explain machine learning in simple words"><span class="prompt-icon purple">✧</span><b>Learn something</b><small>Explain machine learning simply</small><span class="arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Give me 5 creative project ideas"><span class="prompt-icon blue">◈</span><b>Get inspired</b><small>Find ideas for my next project</small><span class="arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Help me debug my code step by step"><span class="prompt-icon orange">{ }</span><b>Write & debug</b><small>Work through a coding problem</small><span class="arrow">↗</span></button>
+            <button class="prompt-card" data-prompt="Give me a study plan for this week"><span class="prompt-icon green">▦</span><b>Make a plan</b><small>Turn goals into clear steps</small><span class="arrow">↗</span></button>
+          </div>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div id="attachment-preview" class="attachment-preview" hidden></div>
+        <form id="chat-form" class="composer">
+          <input id="file-input" type="file" accept="image/*,video/*,.pdf,.txt,.md,.csv,.json,.py,.js,.html,.css" hidden>
+          <button type="button" id="attach-button" class="attach-button" aria-label="Attach a file" title="Attach image, video, PDF or text file">＋</button>
+          <textarea id="message-input" rows="1" placeholder="Message MK Chat Bot..." aria-label="Message MK Chat Bot"></textarea>
+          <button type="submit" id="send-button" class="send-button" aria-label="Send message"><span>↑</span></button>
+        </form>
+        <div class="composer-note"><span>＋ Attach images, videos, PDFs or text files</span><span>MK can make mistakes. Check important info.</span></div>
+      </footer>
+
+      <div id="panda-mascot" class="panda-mascot" aria-label="Animated panda mascot">
+        <button id="hide-panda" class="hide-panda" type="button" aria-label="Hide panda" title="Hide panda">×</button>
+        <div class="panda-spark spark-a">✦</div><div class="panda-spark spark-b">✧</div>
+        <div class="panda-shadow"></div>
+        <div class="panda-character">
+          <div class="panda-ear ear-left"></div><div class="panda-ear ear-right"></div>
+          <div class="panda-head">
+            <div class="eye-patch patch-left"><i></i></div><div class="eye-patch patch-right"><i></i></div>
+            <div class="panda-blush blush-left"></div><div class="panda-blush blush-right"></div>
+            <div class="panda-muzzle"><i></i></div>
+          </div>
+          <div class="panda-body"></div>
+          <div class="panda-arm arm-left"></div><div class="panda-arm arm-right"></div>
+          <div class="panda-foot foot-left"></div><div class="panda-foot foot-right"></div>
+        </div>
+        <div class="panda-caption">Hi, I'm MK's panda! <span>🐼</span></div>
+      </div>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
